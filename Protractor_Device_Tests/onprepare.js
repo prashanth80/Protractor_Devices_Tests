@@ -1,7 +1,6 @@
 'use-strict';
 
 const HTMLReporter = require('protractor-beautiful-reporter');
-
 const CONSTANTS = require('./constants.js');
 
 /**
@@ -21,16 +20,8 @@ function reporter() {
 	}).getJasmine2Reporter());
 }
 
-let browser2;
-/** Spin new browser for parallel testing */
-function spinNewBrowser() {
-	browser2 = browser.forkNewDriverInstance(true);
-}
-
-async function setUp() {
+module.exports = async () => {
 	browser.ignoreSynchronization=true;
 	await browser.waitForAngularEnabled(false);
 	reporter();
-}
-
-module.exports = setUp;
+};
