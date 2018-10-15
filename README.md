@@ -8,7 +8,7 @@ It utilizes <tl><b>P</b>age <b>O</b>ject <b>M</b>odel as the design pattern and 
 
 This automation solution is well tested using Windows7 and Samsung Nexus5. Could not tested on iOS as no resource availability.
 
-## Software installation
+## Software installation for Windows
 1. Install [node.js](https://nodejs.org/dist/v8.12.0/node-v8.12.0-x64.msi).
 
 Below step to be run on command prompt
@@ -37,7 +37,7 @@ Note:
 and paste it into
 %APPDATA%\npm\node_modules\protractor\node_modules\webdriver-manager\selenium\appium-1.6.5\node_modules\appium\node_modules\appium-chromedriver\chromedriver\win
 
-## Installed softwares
+## Installed softwares windows
 
 |Software                       |Version    |
 |-------------------------------|-----------|
@@ -52,6 +52,64 @@ and paste it into
 |Android SDK                    | 24.4.1    |
 |Chrome driver                  | 2.42      |
 
+## Software installation for Mac
+1. Install [Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/) 8 and above. Once installation is complete, ensure JAVA_HOME environment variable is set.
+
+2. Install XCode and then install XCode Cli
+   
+        xcode-select --install
+3. Install HomeBrew
+
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+4. Update the bash profile.
+ 
+        nano ~/.bash_profile
+and then enter below export, save file and exit. Close the terminal once saved.
+
+        export JAVA_HOME=$(/usr/libexec/java_home)
+5. Open a new terminal and run 
+
+        brew update
+6. Install node
+        
+        brew install node
+7. Update npm
+
+        npm i -g npm
+8. Install wd and wd-bridge
+
+        npm i -g --save-dev wd wd-bridge
+9. Install appium
+
+        npm i -g appium
+10. Install Carthage by performing below. Carthage is a web-server for building data manipulation-centric API services in Node.js, mobile and others.
+
+        cd /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
+        brew install carthage
+11. Install web-pack. Run below commands
+
+        npm i -g webpack
+        ./Scripts/bootstrap.sh -d
+12. Install libimobiledevice for real device testing
+    
+        brew install libimobiledevice
+13. Install appium-doctor to verify installation
+  
+        npm i -g appium-doctor
+14. Run appium doctor to verify installation
+  
+        appium-doctor --ios
+Ensure appium-doctor has no complains. Else have to ensure the complains are addressed for successful setup.
+15. Install ios-deploy
+
+        npm i -g ios-deploy
+16. Install ios-webkit-debug-policy
+
+        npm i -g ios-webkit-debug-proxy
+
+## Installed softwares iOS
+// TODO - Need resource to very and update.
+        
 ## Folder structures
 Below is the layout of the files and folders
 
@@ -94,6 +152,9 @@ Below is the layout of the files and folders
   specific state of elements, randomization of string to uniqueness of data, customized click method to ensure unexpected elements are
   not being clicked and reduce test falkiness and scrolling of element into scoll-view to ensure element is well with-in scroll area.
 
+  Reports:
+  Reports are generated for each test run and updated into a folder whose name is based on test rum timestamp. Each test report folder
+  contains a report.html which contains various metrics like, pass, fail, ignored, screenshots and many more details.
   conf.js:
   Protractor depends on the conf file for setting up the test bed which is repetative in nature across test execution cycles.
   
@@ -115,8 +176,21 @@ Below is the layout of the files and folders
   - [Broken links.](https://github.com/prashanth80/Protractor_Devices_Tests/blob/master/Protractor_Device_Tests/features/product_tests.js#L27)
   - [Products are displayed.](https://github.com/prashanth80/Protractor_Devices_Tests/blob/master/Protractor_Device_Tests/features/product_tests.js#L32)
   
-## To execute tests
+## To execute tests on Windows.
 1. Ensure that the Android device's, developer options has USB debugging checked. Once enabled, connect the Android device via an USB.
-2.
-2. Under constans.js, modify ANDROID_DEVICE_NAME
-Goto folder where the conf.js is located and run the below command
+2. Find the device name by issuing command 'adb devices' at the command prompt.
+3. Find the Android version from the Android device settings.
+4. Under constans.js, modify ANDROID_DEVICE_NAME and ANDROID_VERSION from step2 and step3.
+5. If iOS device, get the device name, its version and update values for IOS_DEVICE_NAME, IOS_VERSION.
+6. Based on the device, browser
+Goto to tracked project folder location and run below command
+
+        protractor conf.js
+
+## To execute test on Mac
+1. Find the device iOS version from device settings.
+2. Update IOS_DEVICE_NAME and IOS_VERSION under constants.js
+3. Locate ['Team ID'](https://developer.apple.com/account/#/welcome) from  and update TeamID for key 'xcodeOrgId' under object map IOS_PLATFORM.
+4. Goto to tracked project folder location and run below command
+
+        protractor conf.js
