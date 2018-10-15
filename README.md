@@ -56,56 +56,56 @@ and paste it into
 1. Install [Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/) 8 and above. Once installation is complete, ensure JAVA_HOME environment variable is set.
 
 2. Install XCode and then install XCode Cli
-   
-        xcode-select --install
+
+    xcode-select --install
 3. Install HomeBrew
 
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 4. Update the bash profile.
  
-        nano ~/.bash_profile
+    nano ~/.bash_profile
 and then enter below export, save file and exit. Close the terminal once saved.
 
-        export JAVA_HOME=$(/usr/libexec/java_home)
+    export JAVA_HOME=$(/usr/libexec/java_home)
 5. Open a new terminal and run 
 
-        brew update
+    brew update
 6. Install node
         
-        brew install node
+    brew install node
 7. Update npm
 
-        npm i -g npm
+    npm i -g npm
 8. Install wd and wd-bridge
 
-        npm i -g --save-dev wd wd-bridge
+    npm i -g --save-dev wd wd-bridge
 9. Install appium
 
-        npm i -g appium
+    npm i -g appium
 10. Install Carthage by performing below. Carthage is a web-server for building data manipulation-centric API services in Node.js, mobile and others.
 
-        cd /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
-        brew install carthage
+    cd /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
+    brew install carthage
 11. Install web-pack. Run below commands
 
-        npm i -g webpack
-        ./Scripts/bootstrap.sh -d
+    npm i -g webpack
+    ./Scripts/bootstrap.sh -d
 12. Install libimobiledevice for real device testing
     
-        brew install libimobiledevice
+    brew install libimobiledevice
 13. Install appium-doctor to verify installation
   
-        npm i -g appium-doctor
+    npm i -g appium-doctor
 14. Run appium doctor to verify installation
   
-        appium-doctor --ios
+    appium-doctor --ios
 Ensure appium-doctor has no complains. Else have to ensure the complains are addressed for successful setup.
 15. Install ios-deploy
 
-        npm i -g ios-deploy
+    npm i -g ios-deploy
 16. Install ios-webkit-debug-policy
 
-        npm i -g ios-webkit-debug-proxy
+    npm i -g ios-webkit-debug-proxy
 
 ## Installed softwares iOS
 // TODO - Need resource to very and update.
@@ -185,7 +185,7 @@ Below is the layout of the files and folders
 6. Based on the device, browser
 Goto to tracked project folder location and run below command
 
-        protractor conf.js
+    protractor conf.js
 
 ## To execute test on Mac
 1. Find the device iOS version from device settings.
@@ -193,4 +193,4 @@ Goto to tracked project folder location and run below command
 3. Locate ['Team ID'](https://developer.apple.com/account/#/welcome) from  and update TeamID for key 'xcodeOrgId' under object map IOS_PLATFORM.
 4. Goto to tracked project folder location and run below command
 
-        protractor conf.js
+    protractor conf.js
