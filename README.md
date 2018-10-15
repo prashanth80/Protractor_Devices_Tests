@@ -33,9 +33,11 @@ Below step to be run on command prompt
 Note: 
 1. This step would take about 15 to 20 mins.
 2. Currently update of latest Chrome driver version into Appium is failing. Manually update by copying Chrome driver from
-%APPDATA%\npm\node_modules\protractor\node_modules\webdriver-manager\selenium
+
+    %APPDATA%\npm\node_modules\protractor\node_modules\webdriver-manager\selenium
 and paste it into
-%APPDATA%\npm\node_modules\protractor\node_modules\webdriver-manager\selenium\appium-1.6.5\node_modules\appium\node_modules\appium-chromedriver\chromedriver\win
+    %APPDATA%\npm\node_modules\protractor\node_modules\webdriver-manager\selenium\appium-1.6.5\node_modules\appium\node_modules\appium-
+    chromedriver\chromedriver\win
 
 ## Installed softwares windows
 
@@ -135,35 +137,36 @@ Below is the layout of the files and folders
     |
     \-  onprepare.js
   
-  app:
+  <tl><b><u>app:</b></u></tl>
   All apps to contain in this location.
   
-  components:
+  <tl><b><u>components:</b></u></tl>
   Components are various page objects and they all extend from the base class which is landing.js. These objects help in
   encapsulation of varios methods which are very specific to that page. The components utilize various helper methods located at 
   helpers folder.
   
-  features:
+  <tl><b><u>features:</b></u></tl>
   Features contain various test related to specific module. These test files in turn utilize various helper methods located at helpers
   folder.
   
-  helpers:
+  <tl><b><u>helpers:</b></u></tl>
   Helpers folder contain various helper methods which accelate the tests and reduce flakiness of tests. These helper methods address 
   specific state of elements, randomization of string to uniqueness of data, customized click method to ensure unexpected elements are
   not being clicked and reduce test falkiness and scrolling of element into scoll-view to ensure element is well with-in scroll area.
 
-  Reports:
+  <tl><b><u>Reports:</b></u></tl>
   Reports are generated for each test run and updated into a folder whose name is based on test rum timestamp. Each test report folder
   contains a report.html which contains various metrics like, pass, fail, ignored, screenshots and many more details.
-  conf.js:
+  
+  <tl><b><u>conf.js:</b></u></tl>
   Protractor depends on the conf file for setting up the test bed which is repetative in nature across test execution cycles.
   
-  constants.js:
+  <tl><b><u>constants.js:</b></u></tl>
   All global leve constants are defined here to reduce redudency of data. The constants contain objects maps defined for
   ANDROID_CHROME_CAPABILITY, ANDROID_APP_CAPABILITY, IOS_CHROME_CAPABILITY, IOS_SAFARI_CAPABILITY and other global level contants to
   defined various timeouts.
   
-  onprepare.js:
+  <tl><b><u>onprepare.js:</b></u></tl>
   All test-bed preparatory task are setup in this file, like setting up test report object which will be driven by Jasmine for each 
   test-case run. 
   
