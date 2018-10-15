@@ -67,7 +67,7 @@ Note:
 
 4. Update the bash profile.
 
-		nano ~/.bash_profile
+nano ~/.bash_profile
 and then enter below export, save file and exit. Close the terminal once saved.
 
 		export JAVA_HOME=$(/usr/libexec/java_home)
