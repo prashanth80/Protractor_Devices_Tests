@@ -34,10 +34,11 @@ Below step to be run on command prompt
 Note: 
 1. This step would take about 15 to 20 mins.
 2. Currently update of latest Chrome driver version into Appium is failing. Manually update by copying Chrome driver from
-
+	
+		From:
 		%APPDATA%\npm\node_modules\protractor\node_modules\webdriver-manager\selenium
-and paste it into
-
+		
+		To: 
 		%APPDATA%\npm\node_modules\protractor\node_modules\webdriver-manager\selenium\appium-
 		1.6.5\node_modules\appium\node_modules\appium-chromedriver\chromedriver\win
 
