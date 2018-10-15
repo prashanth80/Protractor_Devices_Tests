@@ -67,7 +67,7 @@ Note:
 
 4. Update the bash profile.
 
-nano ~/.bash_profile
+		nano ~/.bash_profile
 and then enter below export, save file and exit. Close the terminal once saved.
 
 		export JAVA_HOME=$(/usr/libexec/java_home)
@@ -176,6 +176,7 @@ Below is the layout of the files and folders
 <tl><b><u>Login test:</b></u></tl>
   - [Login with invalid credentials.](https://github.com/prashanth80/Protractor_Devices_Tests/blob/master/Protractor_Device_Tests/features/login_tests.js#L18)
   - [Create an account.](https://github.com/prashanth80/Protractor_Devices_Tests/blob/master/Protractor_Device_Tests/features/login_tests.js#L24)
+
 <tl><b><u>Product test:</b></u></tl>
   - [Products sorted by price - High to low.](https://github.com/prashanth80/Protractor_Devices_Tests/blob/master/Protractor_Device_Tests/features/product_tests.js#L18)
   - [Broken links.](https://github.com/prashanth80/Protractor_Devices_Tests/blob/master/Protractor_Device_Tests/features/product_tests.js#L27)
