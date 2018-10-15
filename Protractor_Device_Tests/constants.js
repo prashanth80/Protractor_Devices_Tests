@@ -7,18 +7,18 @@ const MIN = MS * 60;
 const APPIUM_VERSION = '1.6.5';
 const ANDROID = 'Android';
 const ANDROID_DEVICE_NAME = '54d88929';
-const ANDROIDVERSION = '5.0';
+const ANDROID_VERSION = '5.0';
 const ANDROID_APP_NAME = 'com.roomstogo.dealstogo_2018-09-05.apk';
 const CHROME = 'chrome';
 const SAFARI = 'safari';
 const IOS = 'iOS';
-const IOS_DEVICE_NAME = '';
+const IOS_DEVICE_NAME = 'iPhone 8';
 const IOS_VERSION = '12.0';
 
 /** @type {!Object} Android platform and device related information. */
 const ANDROID_PLATFORM = {
 		platformName: ANDROID,
-		platformVersion: ANDROIDVERSION,
+		platformVersion: ANDROID_VERSION,
 		deviceName: ANDROID_DEVICE_NAME,
 }
 
@@ -27,6 +27,10 @@ const IOS_PLATFORM = {
     platformName: IOS,
     platformVersion: IOS_VERSION,
     deviceName: IOS_DEVICE_NAME,
+    automationName: 'XCUITest',
+	udid: 'auto',
+	xcodeOrgId: '<APPLE TEAM ID>',
+	xcodeSigningId: 'iPhone Developer'
   }
 
 /** @type {!Object} Android apk capability. */
@@ -35,8 +39,12 @@ const ANDROID_APP_CAPABILITY = {
 	    'appium-version': APPIUM_VERSION,
 	    ...ANDROID_PLATFORM,
 	     'app': path.join(__dirname, 'app', ANDROID_APP_NAME),
-	     'appWaitActivity': '"com.roomstogo.dealstogo.MainActivity',
+	     'appPackage': 'com.roomstogo.dealstogo',
+	     'appWaitActivity': '.MainActivity',
+	     'appWaitDuration': '60000',
+	     'AutoWebView': 'true',
 };
+
 
 /** @type {!Object} Android Chrome capability. */
 const ANDROID_CHROME_CAPABILITY = {
@@ -61,6 +69,7 @@ const IOS_SAFARI_CAPABILITY = {
 
 /** @type {{exports: Object}} */
 module.exports = {
+		ANDROID_APP_NAME,
 		ANDROID_APP_CAPABILITY,
 		ANDROID_CHROME_CAPABILITY,
 		IOS_CHROME_CAPABILITY,
