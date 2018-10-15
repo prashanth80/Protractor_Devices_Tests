@@ -63,9 +63,8 @@ Note:
 2. Install XCode and then install XCode Cli
 
 		xcode-select --install
-3. Install HomeBrew
+3. Install HomeBrewruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 4. Update the bash profile.
 
 		nano ~/.bash_profile
