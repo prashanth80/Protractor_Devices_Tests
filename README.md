@@ -198,4 +198,4 @@ Goto to tracked project folder location and run below command
 3. Locate ['Team ID'](https://developer.apple.com/account/#/welcome) from  and update TeamID for key 'xcodeOrgId' under object map IOS_PLATFORM.
 4. Goto to tracked project folder location and run below command
 
-		protractor conf.js
+		protractor conf.js 
