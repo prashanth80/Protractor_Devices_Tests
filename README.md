@@ -16,7 +16,7 @@ Below step to be run on command prompt
 
     npm i -g protractor
 3. Install [protractor-beautiful-reporter](https://www.npmjs.com/package/protractor-beautiful-reporter).
-  
+
     npm i -g protractor-beautiful-reporter
 4. Install [wd](https://www.npmjs.com/package/wd) and [wd-bridge](https://www.npmjs.com/package/wd-bridge).
     
