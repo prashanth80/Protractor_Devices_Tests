@@ -37,9 +37,9 @@ Note:
 
 		%APPDATA%\npm\node_modules\protractor\node_modules\webdriver-manager\selenium
 and paste it into
-    	
-		%APPDATA%\npm\node_modules\protractor\node_modules\webdriver-manager\selenium\appium-1.6.5\node_modules\appium\node_modules
-		\appium-chromedriver\chromedriver\win
+
+		%APPDATA%\npm\node_modules\protractor\node_modules\webdriver-manager\selenium\appium-
+		1.6.5\node_modules\appium\node_modules\appium-chromedriver\chromedriver\win
 
 ## Installed softwares windows
 
